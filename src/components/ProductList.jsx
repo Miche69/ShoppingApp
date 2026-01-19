@@ -53,7 +53,7 @@ export default function ProductList() {
                 />
                 <button
                     type="button"
-                    className="ml-2 p-2 bg-indigo-500 text-white rounded-xl"
+                    className="ml-2 p-2 cursor-pointer bg-indigo-500 text-white rounded-xl"
                     onClick={() => {
                         fetchData(); setCurrentPage(1)
                     }}
@@ -73,28 +73,28 @@ export default function ProductList() {
             <div className="pagination flex justify-center pt-8 items-center space-x-3 box-border">
                 {currentPage !== 1 && (
                     <button
-                        className="flex w-10 h-10 justify-center items-center border-gray-400 rounded-full border"
+                        className="flex w-10 h-10 cursor-pointer justify-center items-center border-gray-400 rounded-full border"
                         onClick={() => setCurrentPage(1)}>
                         {"<<"}
                     </button>
                 )}
                 {currentPage - 1 > 0 && (
                     <button
-                        className="w-10 h-10 justify-center items-center border-gray-400 rounded-full border"
+                        className="w-10 h-10 justify-center cursor-pointer items-center border-gray-400 rounded-full border"
                         onClick={() => setCurrentPage(currentPage - 1)}>
                         {"<"}
                     </button>
                 )}
                 {currentPage - 2 > 0 && (
                     <button
-                        className=" w-10 h-10 border-gray-400 rounded-full border"
+                        className=" w-10 h-10 cursor-pointer border-gray-400 rounded-full border"
                         onClick={() => setCurrentPage(currentPage - 2)}>
                         {currentPage - 2}
                     </button>
                 )}
                 {currentPage - 1 > 0 && (
                     <button
-                        className="w-10 h-10 border-gray-400 rounded-full border-1"
+                        className="w-10 h-10 cursor-pointer border-gray-400 rounded-full border-1"
                         onClick={() => setCurrentPage(currentPage - 1)}>
                         {currentPage - 1}
                     </button>
@@ -104,28 +104,28 @@ export default function ProductList() {
                 }
                 {currentPage + 1 <= total && (
                     <button
-                        className="w-10 h-10 border-gray-400 rounded-full border"
+                        className="w-10 h-10 cursor-pointer border-gray-400 rounded-full border"
                         onClick={() => setCurrentPage(currentPage + 1)}>
                         {currentPage + 1}
                     </button>
                 )}
                 {currentPage + 2 <= total && (
                     <button
-                        className="w-10 h-10 border-gray-400 rounded-full border"
+                        className="w-10 h-10 cursor-pointer border-gray-400 rounded-full border"
                         onClick={() => setCurrentPage(currentPage + 2)}>
                         {currentPage + 2}
                     </button>
                 )}
                 {currentPage + 1 <= total && (
                     <button
-                        className="w-10 h-10 justify-center items-center border-gray-400 rounded-full border"
+                        className="w-10 h-10 cursor-pointer justify-center items-center border-gray-400 rounded-full border"
                         onClick={() => setCurrentPage(currentPage + 1)}>
                         {">"}
                     </button>
                 )}
                 {currentPage !== total && (
                     <button
-                        className="w-10 h-10 justify-center items-center border-gray-400 rounded-full border"
+                        className="w-10 h-10 cursor-pointer justify-center items-center border-gray-400 rounded-full border"
                         onClick={() => setCurrentPage(total)}>
                         {">>"}
                     </button>

@@ -75,7 +75,7 @@ export default function CartItem(props) {
                     </button>
                 </div>
             </td>
-            <td className=" p-4" onClick={() => deleteProduct(props.product.id)}>
+            <td className=" p-4 cursor-pointer" onClick={() => deleteProduct(props.product.id)}>
                 <div className="flex justify-center align-items-center ">
                     <img src="/icons8-trash-50.png" alt="remove"
                          height={30}
