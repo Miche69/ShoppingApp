@@ -53,7 +53,7 @@ export default function CartItem(props) {
             <td className="p-4">
                 <div className="flex justify-center align-items-center ">
                     <button
-                        className="border-neutral-300 ease-in-out duration-700 dark:border-neutral-700 p-2 border w-10 flex justify-center disabled:text-neutral-500"
+                        className="border-neutral-300 cursor-pointer ease-in-out duration-700 dark:border-neutral-700 p-2 border w-10 flex justify-center disabled:text-neutral-500"
                         disabled={props.product.quantity <= 1}
                         onClick={() => {
                             updateProducts(props);
@@ -65,7 +65,7 @@ export default function CartItem(props) {
                     <p id="quantity"
                        className="border-neutral-300 ease-in-out duration-700 dark:border-neutral-700  p-2 border-b border-t w-10 justify-center flex"> {props.product.quantity} </p>
                     <button
-                        className="border-neutral-300 ease-in-out duration-700 dark:border-neutral-700  p-2 border w-10 flex justify-center disabled:text-neutral-500"
+                        className="border-neutral-300 cursor-pointer ease-in-out duration-700 dark:border-neutral-700  p-2 border w-10 flex justify-center disabled:text-neutral-500"
                         disabled={props.product.quantity >= props.product.minimumOrderQuantity}
                         onClick={() => {
                             updateProducts(props);

@@ -106,7 +106,7 @@ export default function ProductPage() {
                                 className="border-1 bg-gray-200 ease-in-out duration-700 border-gray-400 dark:bg-neutral-800 dark:border-neutral-700 flex justify-between rounded-xl p-2 mb-2">
                                 <label className="">Menge:</label>
                                 <select
-                                    className="justify-end w-full bg-gray-200 ease-in-out duration-700 dark:bg-neutral-800 border-none"
+                                    className="justify-end w-full cursor-pointer bg-gray-200 ease-in-out duration-700 dark:bg-neutral-800 border-none"
                                     name="quantity">
                                     {(() => {
                                         const quantityInCart = getQuantity(data.id);
@@ -128,7 +128,7 @@ export default function ProductPage() {
                                     })()}
                                 </select>
                             </div>
-                            <button type="submit" className="bg-indigo-500 text-white rounded-xl p-2 justify-end"
+                            <button type="submit" className="bg-indigo-500 cursor-pointer text-white rounded-xl p-2 justify-end"
                                     onClick={() => addProduct(data)}
                             >In
                                 den
