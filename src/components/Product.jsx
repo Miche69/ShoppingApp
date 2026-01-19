@@ -1,37 +1,19 @@
 import {Link} from "react-router-dom";
-import {useContext} from "react";
-import {ThemeContext} from "./ThemeContext.jsx";
 
 export default function Product(props) {
-    const {theme} = useContext(ThemeContext);
-
     return (
-        <div className="product flex flex-col">
+        <div className="product flex text-black ease-in-out duration-700 dark:text-neutral-300 flex-col">
             <Link to={`/products/${props.product.id}`}>
-                {theme === 'light' ? (
                 <img
                     src={props.product.thumbnail}
                     alt="Product Image"
                     width={300}
                     height={300}
-                    className="bg-stone-100"
+                    className="bg-stone-100 ease-in-out duration-700 dark:bg-stone-800"
                 />
-            ) : (
-                <img
-                    src={props.product.thumbnail}
-                    alt="Product Image"
-                    width={300}
-                    height={300}
-                    className="bg-stone-800"
-                />
-            )}
                 <p>{props.product.title}</p>
-                {theme === 'light' ? (
-                <p className="font-light text-gray-700">{props.product.description}</p>
-            ) : (
-                <p className="font-light text-gray-400">{props.product.description}</p>
-            )}
-                <p className="font-bold mt-2">${props.product.price}</p>
+                <p className="font-light ease-in-out duration-700 text-gray-700 dark:text-gray-400">{props.product.description}</p>
+                <p className="font-bold mt-2 dark:">${props.product.price}</p>
             </Link>
         </div>
     )

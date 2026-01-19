@@ -32,8 +32,8 @@ export default function ProductList() {
     }, [currentPage]);
 
     return (
-        <div className="p-4">
-            <div className="header flex border-box pb-5 pt-5 justify-between">
+        <div className="p-4 pt-15 ease-in-out duration-700 min-h-screen text-black dark:text-neutral-300">
+            <div className="flex border-box pb-5 pt-5 justify-between">
                 <h2 className="text-xl font-bold">Trending products</h2>
                 <a className="text-indigo-500 font-semibold text-lg">Shop the collection →</a>
             </div>
@@ -43,11 +43,12 @@ export default function ProductList() {
                 setCurrentPage(1)
             }}>
                 <input
+                    id="search"
                     name="searchQuery"
                     type="text"
                     value={searchQuery}
                     placeholder="Search Products"
-                    className="p-2 border-1 rounded-xl border-gray-500 mb-5"
+                    className="p-2 border-1 ease-in-out duration-700 rounded-xl text-black dark:text-neutral-300 border-gray-500 mb-5"
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <button
@@ -68,7 +69,8 @@ export default function ProductList() {
                     />
                 ))}
             </div>
-            <div className="pagination flex justify-center items-center mt-5 space-x-3 box-border">
+            {total > 1 &&
+            <div className="pagination flex justify-center pt-8 items-center space-x-3 box-border">
                 {currentPage !== 1 && (
                     <button
                         className="flex w-10 h-10 justify-center items-center border-gray-400 rounded-full border"
@@ -97,7 +99,9 @@ export default function ProductList() {
                         {currentPage - 1}
                     </button>
                 )}
+                {total !== 1 &&
                 <button className="bg-indigo-500 text-white  w-10 h-10 rounded-full">{currentPage}</button>
+                }
                 {currentPage + 1 <= total && (
                     <button
                         className="w-10 h-10 border-gray-400 rounded-full border"
@@ -127,6 +131,7 @@ export default function ProductList() {
                     </button>
                 )}
             </div>
+            }
         </div>
     )
 }

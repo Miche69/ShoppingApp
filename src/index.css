@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@layer base {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Light mode */
+    ::-webkit-scrollbar-track {
+        background: var(--track);
+        transition: background 700ms ease-in-out;
+        -webkit-transition: background 700ms ease-in-out;
+        -moz-transition: background 700ms ease-in-out;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--thumb);
+        border-radius: 10px;
+        transition: background 700ms ease-in-out;
+        -webkit-transition: background 700ms ease-in-out;
+        -moz-transition: background 700ms ease-in-out;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #777777;
+    }
+
+    /* Dark mode */
+    .dark ::-webkit-scrollbar-track {
+        background: var(--trackDark);
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+        background: var(--thumbDark);
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+        background: #a0a0a0;
+    }
+}

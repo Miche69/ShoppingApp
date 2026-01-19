@@ -1,18 +1,9 @@
 import ProductList from "../components/ProductList";
-import NavBar from "../components/NavBar.jsx";
-import {useContext} from "react";
-import {ThemeContext} from "../components/ThemeContext.jsx";
 
 export default function Home() {
-    const {theme} = useContext(ThemeContext);
-
-    return theme === "light" ? (
-        <div className="home-page">
+    return (
+        <div className="home-page ease-in-out duration-700 bg-white dark:bg-neutral-900">
             <ProductList />
         </div>
-    ) : (
-        <div className="home-page bg-neutral-900 text-neutral-300">
-            <ProductList />
-        </div>
-    );
+    )
 }
